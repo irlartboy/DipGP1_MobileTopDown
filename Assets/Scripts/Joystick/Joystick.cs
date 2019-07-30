@@ -30,7 +30,10 @@ public class Joystick : MonoBehaviour,
     public Vector2 input = Vector2.zero;
     #endregion
     #region Properties
-
+    public float Horizontal
+    {
+        get { return (snapX) ? SnapFloat(input.x) : input.x; }
+    }
     #endregion
     #region Functions
 
